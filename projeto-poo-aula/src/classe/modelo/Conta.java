@@ -1,10 +1,11 @@
 package classe.modelo;
 
-public class Conta {
+public abstract class Conta {
 	
-	private int codigo;
-	private Pessoa correntista;
-	private float saldo;
+	protected int codigo;
+	protected Pessoa correntista;
+	protected float saldo;
+	
 	
 	public Conta() {
 			
@@ -52,5 +53,8 @@ public class Conta {
 		}
 		return false;
 	}
+	
+	public abstract String verIdade(int idade);
+		
 
 }

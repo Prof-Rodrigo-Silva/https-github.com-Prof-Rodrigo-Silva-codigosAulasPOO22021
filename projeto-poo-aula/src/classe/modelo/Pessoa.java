@@ -1,7 +1,7 @@
 
 
 package classe.modelo;
-public class Pessoa {
+public abstract class Pessoa {
 	
 	private String nome;
 	private int idade;
@@ -51,6 +51,6 @@ public class Pessoa {
 		this.email = email;
 	}
 
-	
+	public abstract String nomeMae();
 
 }
