@@ -1,3 +1,5 @@
+
+
 package classe.modelo;
 
 public abstract class Conta {
@@ -5,24 +7,22 @@ public abstract class Conta {
 	protected int codigo;
 	protected Pessoa correntista;
 	protected float saldo;
+	protected static int numeroContas;
 	
-	
+		
 	public Conta() {
-			
+		//implementaNroContas();
+		numeroContas =1;
+		
 	}
 	
-	public Conta(int codigo, Pessoa correntista, float saldo){
+	public Conta(int codigo, Pessoa correntista, float saldo) {
 		this.codigo = codigo;
 		this.correntista = correntista;
 		this.saldo = saldo;
+		//implementaNroContas();
+		numeroContas =1;
 	}
-	
-	public Conta(int codigo, float saldo) {
-		this.codigo = codigo;
-		this.saldo = saldo;
-	}
-	
-	
 	
 	public int getCodigo() {
 		return codigo;
@@ -43,9 +43,11 @@ public abstract class Conta {
 		this.saldo = saldo;
 	}
 	
-	public void depositar (float valor) {
+	public final void depositar (float valor) {
 		this.saldo = this.saldo + valor;	
 	}
+	
+		
 	public boolean sacar(float valor) {	
 		if(this.saldo - valor >= 0) {
 			this.saldo = this.saldo - valor;
@@ -53,8 +55,22 @@ public abstract class Conta {
 		}
 		return false;
 	}
+
+	public static int getNumeroContas() {
+		return numeroContas;
+	}
+
+	public static void implementaNroContas() {
+		numeroContas++;
+	}
 	
-	public abstract String verIdade(int idade);
-		
+	
+	
 
 }
+
+
+
+
+
+

@@ -1,12 +1,11 @@
-
-
 package classe.modelo;
-public abstract class Pessoa {
+
+public class Pessoa {
 	
-	private String nome;
-	private int idade;
-	private long celular;
-	private String email;
+	public String nome;
+	public int idade;
+	public long celular;
+	public String email;
 	
 	public Pessoa() {
 		
@@ -17,40 +16,32 @@ public abstract class Pessoa {
 		this.idade = idade;
 		this.celular = celular;
 		this.email = email;
+		
 	}
-
+	
 	public String getNome() {
 		return nome;
 	}
-
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
 	public int getIdade() {
 		return idade;
 	}
-
 	public void setIdade(int idade) {
 		this.idade = idade;
 	}
-
 	public long getCelular() {
 		return celular;
 	}
-
 	public void setCelular(long celular) {
 		this.celular = celular;
 	}
-
 	public String getEmail() {
 		return email;
 	}
-
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
-	public abstract String nomeMae();
-
+	
 }
