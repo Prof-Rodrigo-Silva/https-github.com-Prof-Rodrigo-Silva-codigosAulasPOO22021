@@ -18,7 +18,7 @@ public class ClasseExecutavel {
 		System.out.println(especial.sacar(1000));
 		
 		
-		System.out.println(especial.movimentar(500, especial.DEPOSITAR));*/
+		System.out.println(especial.movimentar(500, especial.DEPOSITAR));
 		
 		ContaEspecial conta1, conta2, conta3;
 		
@@ -29,10 +29,18 @@ public class ClasseExecutavel {
 		System.out.println(conta2.getNumeroContas());
 		
 		conta3 = new ContaEspecial();
-		System.out.println(conta3.getNumeroContas());
+		System.out.println(conta3.getNumeroContas());*/
         
-        
-    }
+		Pessoa correntista = new Pessoa("Ciclano",33,999887766,"ciclano@gmail.com");
+		
+		ContaEspecial especial = new ContaEspecial(3322, correntista, 1500, 500);
+		
+		System.out.println(especial.getSaldo());
+		
+		especial.descontarTaxaManutencao();
+		
+		System.out.println(especial.getSaldo());
+	}
 		
 }
 

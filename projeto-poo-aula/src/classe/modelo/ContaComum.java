@@ -2,7 +2,9 @@
 
 package classe.modelo;
 
-public final class ContaComum extends Conta {
+import interfaces.Taxas;
+
+public final class ContaComum extends Conta implements Taxas{
 
 	
 	@Override
@@ -13,6 +15,19 @@ public final class ContaComum extends Conta {
 		}
 		return false;
 	}
+
+	@Override
+	public float getTaxaManutencao() {
+		return 3.0f;
+	}
+
+	@Override
+	public void descontarTaxaManutencao() {
+		this.setSaldo(this.getSaldo() - this.getTaxaManutencao());
+		
+	}
+
+	
 
 }
 
