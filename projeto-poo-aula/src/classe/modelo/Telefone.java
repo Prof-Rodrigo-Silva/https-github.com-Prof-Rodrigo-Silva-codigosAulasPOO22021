@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Telefone {
 	private String marca;
 	private String modelo;
-	private int imei;
+	private long imei;
 	
 	public String getMarca() {
 		return marca;
@@ -19,10 +19,10 @@ public class Telefone {
 	public void setModelo(String modelo) {
 		this.modelo = modelo;
 	}
-	public int getImei() {
+	public long getImei() {
 		return imei;
 	}
-	public void setImei(int imei) {
+	public void setImei(long imei) {
 		this.imei = imei;
 	}
 	@Override
